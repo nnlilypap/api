@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Oliver Sykes</title>
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+    }
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Oliver Sykes</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Main</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Галерея фото</h2>
+      <div class="gallery">
+        <img src="photo.jpg" alt="Oliver Sykes">
+        <img src="photo1.jpeg" alt="Oliver Sykes">
+        <img src="photo2.jpg" alt="Oliver Sykes">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Oliver Sykes. All rights reserved.</p>
+  </footer>
+</body>
+</html>

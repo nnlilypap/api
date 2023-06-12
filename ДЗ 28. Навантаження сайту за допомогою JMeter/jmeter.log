@@ -1,0 +1,61 @@
+2023-06-12 14:33:55,137 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2023-06-12 14:33:55,253 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2023-06-12 14:33:55,255 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2023-06-12 14:33:55,306 INFO o.a.j.JMeter: Copyright (c) 1998-2022 The Apache Software Foundation
+2023-06-12 14:33:55,307 INFO o.a.j.JMeter: Version 5.5
+2023-06-12 14:33:55,307 INFO o.a.j.JMeter: java.version=17.0.7
+2023-06-12 14:33:55,307 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2023-06-12 14:33:55,308 INFO o.a.j.JMeter: os.name=Windows 10
+2023-06-12 14:33:55,309 INFO o.a.j.JMeter: os.arch=amd64
+2023-06-12 14:33:55,309 INFO o.a.j.JMeter: os.version=10.0
+2023-06-12 14:33:55,310 INFO o.a.j.JMeter: file.encoding=Cp1251
+2023-06-12 14:33:55,311 INFO o.a.j.JMeter: java.awt.headless=true
+2023-06-12 14:33:55,311 INFO o.a.j.JMeter: Max memory     =1073741824
+2023-06-12 14:33:55,311 INFO o.a.j.JMeter: Available Processors =4
+2023-06-12 14:33:55,367 INFO o.a.j.JMeter: Default Locale=English (EN)
+2023-06-12 14:33:55,369 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2023-06-12 14:33:55,370 INFO o.a.j.JMeter: JMeterHome=D:\JMeter\apache-jmeter-5.5
+2023-06-12 14:33:55,370 INFO o.a.j.JMeter: user.dir  =D:\JMeter\apache-jmeter-5.5\bin
+2023-06-12 14:33:55,371 INFO o.a.j.JMeter: PWD       =D:\JMeter\apache-jmeter-5.5\bin
+2023-06-12 14:33:55,375 INFO o.a.j.JMeter: IP: 192.168.0.109 Name: WIN-TUK6AQVAN5B FullName: WIN-TUK6AQVAN5B
+2023-06-12 14:33:55,422 INFO o.a.j.JMeter: Setting property 'jmeter.reportgenerator.outputdir' to:'D:\Korniev_Hillel\Korniev_study\Lilia\Reports'
+2023-06-12 14:33:55,451 INFO o.a.j.s.FileServer: Default base='D:\JMeter\apache-jmeter-5.5\bin'
+2023-06-12 14:33:55,458 INFO o.a.j.s.FileServer: Set new base='D:\Korniev_Hillel\Korniev_study\Lilia'
+2023-06-12 14:33:56,929 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2023-06-12 14:33:57,081 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2023-06-12 14:33:57,140 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2023-06-12 14:33:57,174 INFO o.a.j.s.SaveService: Loading file: D:\Korniev_Hillel\Korniev_study\Lilia\Home_Work_28_Test_plan.jmx
+2023-06-12 14:33:57,449 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2023-06-12 14:33:57,513 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-06-12 14:33:57,513 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-06-12 14:33:57,513 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-06-12 14:33:57,514 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-06-12 14:33:57,514 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2023-06-12 14:33:57,514 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2023-06-12 14:33:58,089 INFO o.a.j.JMeter: Creating summariser <summary>
+2023-06-12 14:33:58,105 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: ','
+2023-06-12 14:33:58,107 ERROR o.a.j.JMeter: Error in NonGUIDriver
+java.lang.IllegalArgumentException: Results file:MyReport.csv is not empty
+	at org.apache.jmeter.report.dashboard.ReportGenerator.<init>(ReportGenerator.java:139) ~[ApacheJMeter_core.jar:5.5]
+	at org.apache.jmeter.JMeter.runNonGui(JMeter.java:986) ~[ApacheJMeter_core.jar:5.5]
+	at org.apache.jmeter.JMeter.startNonGui(JMeter.java:917) ~[ApacheJMeter_core.jar:5.5]
+	at org.apache.jmeter.JMeter.start(JMeter.java:485) ~[ApacheJMeter_core.jar:5.5]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.apache.jmeter.NewDriver.main(NewDriver.java:259) ~[ApacheJMeter.jar:5.5]
+2023-06-12 14:33:58,158 ERROR o.a.j.JMeter: An error occurred: 
+org.apache.jmeter.report.config.ConfigurationException: Error in NonGUIDriver Results file:MyReport.csv is not empty
+	at org.apache.jmeter.JMeter.runNonGui(JMeter.java:1028) ~[ApacheJMeter_core.jar:5.5]
+	at org.apache.jmeter.JMeter.startNonGui(JMeter.java:917) ~[ApacheJMeter_core.jar:5.5]
+	at org.apache.jmeter.JMeter.start(JMeter.java:485) ~[ApacheJMeter_core.jar:5.5]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.apache.jmeter.NewDriver.main(NewDriver.java:259) ~[ApacheJMeter.jar:5.5]
+Caused by: java.lang.IllegalArgumentException: Results file:MyReport.csv is not empty
+	at org.apache.jmeter.report.dashboard.ReportGenerator.<init>(ReportGenerator.java:139) ~[ApacheJMeter_core.jar:5.5]
+	at org.apache.jmeter.JMeter.runNonGui(JMeter.java:986) ~[ApacheJMeter_core.jar:5.5]
+	... 7 more

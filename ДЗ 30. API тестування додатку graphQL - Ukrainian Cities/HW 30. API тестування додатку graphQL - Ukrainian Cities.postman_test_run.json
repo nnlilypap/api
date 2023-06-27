@@ -1,0 +1,323 @@
+{
+	"id": "e9b5c4ea-e150-4292-929a-a20cb6bf2939",
+	"name": "HW 30. API тестування додатку graphQL - Ukrainian Cities",
+	"timestamp": "2023-06-27T17:28:59.564Z",
+	"collection_id": "28048568-489dd3dd-ad92-4ebe-84a2-cf34406479e2",
+	"folder_id": "28048568-392e74ed-a09b-4d93-bb3e-e4688deddf7a",
+	"environment_id": "0",
+	"totalPass": 21,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-06-27T17:28:58.330Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "fad9af94-ce7e-4560-a71d-7bf0d33a01fc",
+			"name": "Get All Cities",
+			"url": "https://graphql-ukrainian-cities.hillel.it/graphql",
+			"time": 203,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Content-Type is present": true,
+				"Successful POST request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				203
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Content-Type is present": true,
+					"Successful POST request": true
+				}
+			]
+		},
+		{
+			"id": "e9e7ab62-d457-43d2-a02c-b2466bd95add",
+			"name": "Get City By Id",
+			"url": "https://graphql-ukrainian-cities.hillel.it/graphql",
+			"time": 38,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Content-Type is present": true,
+				"Successful POST request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				38
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Content-Type is present": true,
+					"Successful POST request": true
+				}
+			]
+		},
+		{
+			"id": "053d79a9-9959-45c0-8387-d7eb3a258a4c",
+			"name": "Get Cityis By RangeId",
+			"url": "https://graphql-ukrainian-cities.hillel.it/graphql",
+			"time": 43,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Content-Type is present": true,
+				"Successful POST request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				43
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Content-Type is present": true,
+					"Successful POST request": true
+				}
+			]
+		},
+		{
+			"id": "662f9254-4f78-4f99-b78e-19d5a9cb862e",
+			"name": "Get City By Id Alias Methods And Fragment",
+			"url": "https://graphql-ukrainian-cities.hillel.it/graphql",
+			"time": 37,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Content-Type is present": true,
+				"Successful POST request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				37
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Content-Type is present": true,
+					"Successful POST request": true
+				}
+			]
+		},
+		{
+			"id": "bbfc7b2a-7717-441d-8206-63eb921fc6ac",
+			"name": "Add City",
+			"url": "https://graphql-ukrainian-cities.hillel.it/graphql",
+			"time": 37,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Content-Type is present": true,
+				"Successful POST request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				37
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Content-Type is present": true,
+					"Successful POST request": true
+				}
+			]
+		},
+		{
+			"id": "ba018365-6010-44a9-bb39-a7d764434024",
+			"name": "Update City",
+			"url": "https://graphql-ukrainian-cities.hillel.it/graphql",
+			"time": 38,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Content-Type is present": true,
+				"Successful POST request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				38
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Content-Type is present": true,
+					"Successful POST request": true
+				}
+			]
+		},
+		{
+			"id": "86c319bf-eb8f-4594-b8d9-87464e58a594",
+			"name": "Delete City",
+			"url": "https://graphql-ukrainian-cities.hillel.it/graphql",
+			"time": 38,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Content-Type is present": true,
+				"Successful POST request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				38
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Content-Type is present": true,
+					"Successful POST request": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 434,
+	"collection": {
+		"requests": [
+			{
+				"id": "fad9af94-ce7e-4560-a71d-7bf0d33a01fc",
+				"method": "POST"
+			},
+			{
+				"id": "e9e7ab62-d457-43d2-a02c-b2466bd95add",
+				"method": "POST"
+			},
+			{
+				"id": "053d79a9-9959-45c0-8387-d7eb3a258a4c",
+				"method": "POST"
+			},
+			{
+				"id": "662f9254-4f78-4f99-b78e-19d5a9cb862e",
+				"method": "POST"
+			},
+			{
+				"id": "bbfc7b2a-7717-441d-8206-63eb921fc6ac",
+				"method": "POST"
+			},
+			{
+				"id": "ba018365-6010-44a9-bb39-a7d764434024",
+				"method": "POST"
+			},
+			{
+				"id": "86c319bf-eb8f-4594-b8d9-87464e58a594",
+				"method": "POST"
+			}
+		]
+	}
+}

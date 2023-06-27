@@ -1,0 +1,481 @@
+{
+	"id": "091ad94e-767c-456b-945c-d5fa97ca4028",
+	"name": "HW 29. API тестування додатку qaAuto",
+	"timestamp": "2023-06-27T17:24:31.197Z",
+	"collection_id": "28048568-a4a1a85b-ac4d-49a3-b38f-96edaf69a1cf",
+	"folder_id": "28048568-b65bbbde-6df2-4452-95ca-1b2a6cc274b0",
+	"environment_id": "0",
+	"totalPass": 39,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-06-27T17:24:28.019Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "7b31f073-8975-490a-a91c-d5a043239eb3",
+			"name": "Sign up",
+			"url": "https://qauto2.forstudy.space/api/auth/signup",
+			"time": 1306,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Registration successful": true,
+				"Content-Type is present": true,
+				"Check status": true,
+				"Successful POST request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Registration successful": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check status": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1306
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Registration successful": true,
+					"Content-Type is present": true,
+					"Check status": true,
+					"Successful POST request": true
+				}
+			]
+		},
+		{
+			"id": "858fd14c-0172-471e-81d1-101f697f4852",
+			"name": "Sign in",
+			"url": "https://qauto2.forstudy.space/api/auth/signin",
+			"time": 531,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"SignIn successful": true,
+				"Content-Type is present": true,
+				"Check status": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"SignIn successful": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				531
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"SignIn successful": true,
+					"Content-Type is present": true,
+					"Check status": true
+				}
+			]
+		},
+		{
+			"id": "c7dd02ad-ffc5-4bd2-bafb-1b712c79cdc9",
+			"name": "Uptade profile",
+			"url": "https://qauto2.forstudy.space/api/users/profile",
+			"time": 47,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Uptade successful": true,
+				"Content-Type is present": true,
+				"Check status": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Uptade successful": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				47
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Uptade successful": true,
+					"Content-Type is present": true,
+					"Check status": true
+				}
+			]
+		},
+		{
+			"id": "32a7a153-1815-49c0-bdb4-95e1bae5870e",
+			"name": "Uptade settings",
+			"url": "https://qauto2.forstudy.space/api/users/settings",
+			"time": 50,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Uptade successful": true,
+				"Content-Type is present": true,
+				"Check status": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Uptade successful": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				50
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Uptade successful": true,
+					"Content-Type is present": true,
+					"Check status": true
+				}
+			]
+		},
+		{
+			"id": "4580da4f-bc9b-4116-b9de-bc9e80ad2c9c",
+			"name": "Add car",
+			"url": "https://qauto2.forstudy.space/api/cars",
+			"time": 54,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Check car brand is Audi": true,
+				"Status code is 201": true,
+				"Add car successful": true,
+				"Content-Type is present": true,
+				"Check status": true
+			},
+			"testPassFailCounts": {
+				"Check car brand is Audi": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Add car successful": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				54
+			],
+			"allTests": [
+				{
+					"Check car brand is Audi": true,
+					"Status code is 201": true,
+					"Add car successful": true,
+					"Content-Type is present": true,
+					"Check status": true
+				}
+			]
+		},
+		{
+			"id": "8c29bea5-5af6-4d94-8e4c-821595bee221",
+			"name": "Uptade mileage",
+			"url": "https://qauto2.forstudy.space/api/cars/99223",
+			"time": 63,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check car brand is Audi": true,
+				"Status code is 200": true,
+				"Uptade Mileage successful": true,
+				"Content-Type is present": true,
+				"Check status": true
+			},
+			"testPassFailCounts": {
+				"Check car brand is Audi": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Uptade Mileage successful": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				63
+			],
+			"allTests": [
+				{
+					"Check car brand is Audi": true,
+					"Status code is 200": true,
+					"Uptade Mileage successful": true,
+					"Content-Type is present": true,
+					"Check status": true
+				}
+			]
+		},
+		{
+			"id": "72313a35-296a-4bfd-b16c-307070688dfe",
+			"name": "Uptade expenses",
+			"url": "https://qauto2.forstudy.space/api/expenses",
+			"time": 61,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Add expenses successful": true,
+				"Content-Type is present": true,
+				"Check status": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Add expenses successful": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				61
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Add expenses successful": true,
+					"Content-Type is present": true,
+					"Check status": true
+				}
+			]
+		},
+		{
+			"id": "be4963e4-7a52-4644-8b5f-11612725fb8f",
+			"name": "Delete car",
+			"url": "https://qauto2.forstudy.space/api/cars/99223",
+			"time": 45,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Delete car successful": true,
+				"Content-Type is present": true,
+				"Check status": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Delete car successful": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				45
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Delete car successful": true,
+					"Content-Type is present": true,
+					"Check status": true
+				}
+			]
+		},
+		{
+			"id": "aacc2d3e-d8f3-41cd-aceb-4504c91fb30d",
+			"name": "Delete user",
+			"url": "https://qauto2.forstudy.space/api/users/",
+			"time": 46,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Delete account successful": true,
+				"Content-Type is present": true,
+				"Check status": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Delete account successful": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Delete account successful": true,
+					"Content-Type is present": true,
+					"Check status": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2203,
+	"collection": {
+		"requests": [
+			{
+				"id": "7b31f073-8975-490a-a91c-d5a043239eb3",
+				"method": "POST"
+			},
+			{
+				"id": "858fd14c-0172-471e-81d1-101f697f4852",
+				"method": "POST"
+			},
+			{
+				"id": "c7dd02ad-ffc5-4bd2-bafb-1b712c79cdc9",
+				"method": "PUT"
+			},
+			{
+				"id": "32a7a153-1815-49c0-bdb4-95e1bae5870e",
+				"method": "PUT"
+			},
+			{
+				"id": "4580da4f-bc9b-4116-b9de-bc9e80ad2c9c",
+				"method": "POST"
+			},
+			{
+				"id": "8c29bea5-5af6-4d94-8e4c-821595bee221",
+				"method": "PUT"
+			},
+			{
+				"id": "72313a35-296a-4bfd-b16c-307070688dfe",
+				"method": "POST"
+			},
+			{
+				"id": "be4963e4-7a52-4644-8b5f-11612725fb8f",
+				"method": "DELETE"
+			},
+			{
+				"id": "aacc2d3e-d8f3-41cd-aceb-4504c91fb30d",
+				"method": "DELETE"
+			}
+		]
+	}
+}

@@ -1,0 +1,689 @@
+{
+	"info": {
+		"_postman_id": "a4a1a85b-ac4d-49a3-b38f-96edaf69a1cf",
+		"name": "HW 29. API тестування додатку qaAuto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28048568"
+	},
+	"item": [
+		{
+			"name": "HW 29",
+			"item": [
+				{
+					"name": "Sign up",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var request = pm.request.body.raw;\r",
+									"console.log(request);\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Registration successful\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.status).to.eql('ok');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"    });\r",
+									"\r",
+									"    pm.test(\"Check status\", function () {\r",
+									"        var jsonData = pm.response.json();\r",
+									"        pm.expect(jsonData.status).to.eql('ok');\r",
+									"    });\r",
+									"\r",
+									"\r",
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const firstName = pm.collectionVariables.replaceIn(\"{{$randomFirstName}}\");\r",
+									"const lastName = pm.collectionVariables.replaceIn(\"{{$randomLastName}}\");\r",
+									"const password = pm.collectionVariables.replaceIn('{{$randomPassword}}');\r",
+									"const email = `${firstName.toLowerCase()}-${lastName.toLowerCase()}@gmail.com`;\r",
+									"\r",
+									"console.log(firstName, lastName, email, password)\r",
+									"\r",
+									"pm.collectionVariables.set('firstName', firstName);\r",
+									"pm.collectionVariables.set('lastName', lastName);\r",
+									"pm.collectionVariables.set('email', email);\r",
+									"pm.collectionVariables.set('password', password);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"{{firstName}}\",\r\n  \"lastName\": \"{{lastName}}\",\r\n  \"email\": \"{{email}}\",\r\n  \"password\": \"{{password}}\",\r\n  \"repeatPassword\": \"{{password}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/signup",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign in",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var request = pm.request.body.raw;\r",
+									"console.log(request);\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"SignIn successful\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.status).to.eql('ok');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"    });\r",
+									"\r",
+									"    pm.test(\"Check status\", function () {\r",
+									"        var jsonData = pm.response.json();\r",
+									"        pm.expect(jsonData.status).to.eql('ok');\r",
+									"    });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"{{email}}\",\r\n  \"password\": \"{{password}}\",\r\n  \"remember\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/signin",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uptade profile",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var request = pm.request.body.raw;\r",
+									"console.log(request);\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Uptade successful\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.status).to.eql('ok');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"    });\r",
+									"\r",
+									"    pm.test(\"Check status\", function () {\r",
+									"        var jsonData = pm.response.json();\r",
+									"        pm.expect(jsonData.status).to.eql('ok');\r",
+									"    });"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const firstName = pm.collectionVariables.replaceIn(\"{{$randomFirstName}}\");\r",
+									"const lastName = pm.collectionVariables.replaceIn(\"{{$randomLastName}}\");\r",
+									"\r",
+									"pm.collectionVariables.set('firstName', firstName);\r",
+									"pm.collectionVariables.set('lastName', lastName);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"photo\": \"user-1621352948859.jpg\",\r\n  \"name\": \"{{firstName}}\",\r\n  \"lastName\": \"{{lastName}}\",\r\n  \"dateBirth\": \"2021-03-17T15:21:05.000Z\",\r\n  \"country\": \"Ukraine\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/users/profile",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uptade settings",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var request = pm.request.body.raw;\r",
+									"console.log(request);\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Uptade successful\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.status).to.eql('ok');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"    });\r",
+									"\r",
+									"    pm.test(\"Check status\", function () {\r",
+									"        var jsonData = pm.response.json();\r",
+									"        pm.expect(jsonData.status).to.eql('ok');\r",
+									"    });"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"currency\": \"usd\",\r\n  \"distanceUnits\": \"ml\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/users/settings",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add car",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var request = pm.request.body.raw;\r",
+									"console.log(request);\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.collectionVariables.set('CarID', jsonData.data.id)\r",
+									"pm.collectionVariables.set(\"Mileage\", jsonData.data.mileage);\r",
+									"\r",
+									"pm.test(\"Check car brand is Audi\", function () {\r",
+									"    pm.expect(jsonData.data.brand).to.eql('Audi');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Add car successful\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.status).to.eql('ok');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"    });\r",
+									"\r",
+									"    pm.test(\"Check status\", function () {\r",
+									"        var jsonData = pm.response.json();\r",
+									"        pm.expect(jsonData.status).to.eql('ok');\r",
+									"    });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"carBrandId\": 1,\r\n  \"carModelId\": 1,\r\n  \"mileage\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/cars",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uptade mileage",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var request = pm.request.body.raw;\r",
+									"console.log(request);\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"\r",
+									"\r",
+									"pm.test(\"Check car brand is Audi\", function () {\r",
+									"    pm.expect(jsonData.data.brand).to.eql('Audi');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Uptade Mileage successful\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.status).to.eql('ok');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"    });\r",
+									"\r",
+									"    pm.test(\"Check status\", function () {\r",
+									"        var jsonData = pm.response.json();\r",
+									"        pm.expect(jsonData.status).to.eql('ok');\r",
+									"    });"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set (\"randomNum\", _.random (101,999999));\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"carBrandId\": 1,\r\n  \"carModelId\": 1,\r\n  \"mileage\": {{randomNum}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/cars/{{CarID}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"cars",
+								"{{CarID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uptade expenses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var request = pm.request.body.raw;\r",
+									"console.log(request);\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Add expenses successful\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.status).to.eql('ok');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"    });\r",
+									"\r",
+									"    pm.test(\"Check status\", function () {\r",
+									"        var jsonData = pm.response.json();\r",
+									"        pm.expect(jsonData.status).to.eql('ok');\r",
+									"    });"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var moment = require('moment');\r",
+									"\r",
+									"pm.collectionVariables.set('currentdate', moment().format((\"YYYY-MM-DD\")));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"carId\": {{CarID}},\r\n  \"reportedAt\": \"{{currentdate}}\",\r\n  \"mileage\": {{randomNum}},\r\n  \"liters\": 30,\r\n  \"totalCost\": 30,\r\n  \"forceMileage\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/expenses",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"expenses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete car",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Delete car successful\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.status).to.eql('ok');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"    });\r",
+									"\r",
+									"    pm.test(\"Check status\", function () {\r",
+									"        var jsonData = pm.response.json();\r",
+									"        pm.expect(jsonData.status).to.eql('ok');\r",
+									"    });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/cars/{{CarID}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"cars",
+								"{{CarID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Delete account successful\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.status).to.eql('ok');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"    });\r",
+									"\r",
+									"    pm.test(\"Check status\", function () {\r",
+									"        var jsonData = pm.response.json();\r",
+									"        pm.expect(jsonData.status).to.eql('ok');\r",
+									"    });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/users/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "https://qauto2.forstudy.space/api",
+			"type": "string"
+		},
+		{
+			"key": "Email Valid",
+			"value": "Gilberto_Schmeler77@yahoo.com",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "Password Valid",
+			"value": "Test23465",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "CarID",
+			"value": ""
+		},
+		{
+			"key": "Mileage",
+			"value": ""
+		},
+		{
+			"key": "firstName",
+			"value": ""
+		},
+		{
+			"key": "lastName",
+			"value": ""
+		},
+		{
+			"key": "email",
+			"value": ""
+		},
+		{
+			"key": "password",
+			"value": ""
+		},
+		{
+			"key": "randomNum",
+			"value": ""
+		},
+		{
+			"key": "currentdate",
+			"value": ""
+		}
+	]
+}
